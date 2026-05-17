@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Architecture Parking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Architecture Parking Area</h1>
+
+<div class="map-container">
+
+<img src="architecture.jpg">
+
+<div class="slot" style="top:50px; left:150px;" onclick="selectSlot(this,'A1')">A1</div>
+<div class="slot" style="top:50px; left:350px;" onclick="selectSlot(this,'A2')">A2</div>
+<div class="slot" style="top:50px; left:500px;" onclick="selectSlot(this,'A3')">A3</div>
+<div class="slot" style="top:50px; left:700px;" onclick="selectSlot(this,'A4')">A4</div>
+
+
+</div>
+
+<div id="bookingSection" class="form-container" style="display:none;">
+
+<h3 id="selectedSlotText"></h3>
+
+<form id="bookingForm" onsubmit="event.preventDefault(); confirmBooking();">
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="text" id="phone" placeholder="Enter Contact Number">
+<input type="text" id="vehicle" placeholder="Vehicle Number">
+
+<button type="submit">Confirm Booking</button>
+
+</form>
+
+<p id="confirmation"></p>
+<p id="timer"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

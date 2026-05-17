@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Smart Parking Map</title>
+
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+</head>
+
+<body>
+
+<h1 style="text-align:center;">Select Parking Slot</h1>
+
+<div class="map-container">
+
+<img src="parking.jpg" class="map">
+
+<!-- TOP ROW -->
+
+<button class="slot" style="top:80px; left:180px;" onclick="openForm(this)">A1</button>
+<button class="slot" style="top:80px; left:260px;" onclick="openForm(this)">A2</button>
+<button class="slot" style="top:80px; left:340px;" onclick="openForm(this)">A3</button>
+<button class="slot" style="top:80px; left:420px;" onclick="openForm(this)">A4</button>
+<button class="slot" style="top:80px; left:500px;" onclick="openForm(this)">A5</button>
+<button class="slot" style="top:80px; left:580px;" onclick="openForm(this)">A6</button>
+
+<!-- BOTTOM ROW -->
+
+<button class="slot" style="top:340px; left:180px;" onclick="openForm(this)">B1</button>
+<button class="slot" style="top:340px; left:260px;" onclick="openForm(this)">B2</button>
+<button class="slot" style="top:340px; left:340px;" onclick="openForm(this)">B3</button>
+<button class="slot" style="top:340px; left:420px;" onclick="openForm(this)">B4</button>
+<button class="slot" style="top:340px; left:500px;" onclick="openForm(this)">B5</button>
+<button class="slot" style="top:340px; left:580px;" onclick="openForm(this)">B6</button>
+
+</div>
+
+<p id="timer" style="text-align:center;font-size:18px;"></p>
+
+<!-- BOOKING FORM -->
+
+<div id="bookingForm" class="form-popup">
+
+<h3>Enter Booking Details</h3>
+
+<input type="text" id="name" placeholder="Enter Name">
+
+<input type="text" id="phone" placeholder="Enter Phone Number">
+
+<button onclick="confirmBooking()">Confirm Booking</button>
+
+<button onclick="closeForm()">Cancel</button>
+
+</div>
+
+<!-- CONFIRMATION MESSAGE -->
+
+<div id="confirmationBox" class="confirmation">
+
+<h2>Parking Booking Confirmed</h2>
+
+<p id="confirmDetails"></p>
+
+<button onclick="closeConfirmation()">OK</button>
+
+</div>
+<div id="bookingForm" class="popup">
+
+<h2>Book Parking Slot</h2>
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<input type="text" id="phone" placeholder="Enter contact number">
+
+<button onclick="confirmBooking()">Confirm Booking</button>
+
+</div>
+
+</body>
+</html>
